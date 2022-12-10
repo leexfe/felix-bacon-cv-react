@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/felix-bacon-cv-react/static/css/main.d4e6b7ac.chunk.css",
+    "main.js": "/felix-bacon-cv-react/static/js/main.349a3ab6.chunk.js",
+    "main.js.map": "/felix-bacon-cv-react/static/js/main.349a3ab6.chunk.js.map",
+    "runtime-main.js": "/felix-bacon-cv-react/static/js/runtime-main.2a6cd72f.js",
+    "runtime-main.js.map": "/felix-bacon-cv-react/static/js/runtime-main.2a6cd72f.js.map",
+    "static/js/2.bab10fe8.chunk.js": "/felix-bacon-cv-react/static/js/2.bab10fe8.chunk.js",
+    "static/js/2.bab10fe8.chunk.js.map": "/felix-bacon-cv-react/static/js/2.bab10fe8.chunk.js.map",
+    "index.html": "/felix-bacon-cv-react/index.html",
+    "static/css/main.d4e6b7ac.chunk.css.map": "/felix-bacon-cv-react/static/css/main.d4e6b7ac.chunk.css.map",
+    "static/js/2.bab10fe8.chunk.js.LICENSE.txt": "/felix-bacon-cv-react/static/js/2.bab10fe8.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/felix-bacon-cv-react/static/media/code-ligne-jaune.31494e64.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a6cd72f.js",
+    "static/js/2.bab10fe8.chunk.js",
+    "static/css/main.d4e6b7ac.chunk.css",
+    "static/js/main.349a3ab6.chunk.js"
+  ]
+}
