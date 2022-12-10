@@ -1,0 +1,198 @@
+.sidebar {
+  border:2px solid $color-6;
+  background: $color-1;
+  font-family: $font-1;
+  height: 100%;
+  min-height: $minHeight;
+  min-width: 264px;
+  border-radius: $borderRadius;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 250px 1fr 108px;
+  grid-template-rows:40% 50% 10%;
+  grid-template-areas: 
+    "1"
+    "2"
+    "3";
+
+
+    //  transition: 0.2s ease;
+  .id {
+    grid-area: 1;
+    text-align: center;
+    user-select: none;
+    position: relative;
+
+    .idContent {
+      position: absolute;
+      bottom: 0;
+      left: 48%;
+      transform: translateX(-50%);
+      width: 100%;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10%;
+        // box-shadow: 0 0 0 4px $color-3, 0 0 0 8px $color-4, 0 0 0 12px $color-6;
+         box-shadow:  0 0 0 2px $color-6, ;
+      }
+      h3 {
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        margin-top: 1.5rem;
+        color: $color-6;
+        text-shadow: 3px 3px 3px $white;
+      }
+    }
+  }
+  .navigation {
+    grid-area: 2;
+    padding: 2rem 1rem;
+
+    ul {
+      height: 100%;
+      display: grid;
+    
+      li {
+        padding: 1rem 0 1rem .4rem;
+        font-size: 1.3rem;
+        position: relative;
+
+        &:hover  {
+          transform: translateX(3px);
+          text-shadow: 8px 8px 8px $white;
+          font-weight: 700;
+          i, span{
+            transition: .2s ease;
+            color: $black;
+            text-shadow: 8px 8px 8px $white;
+          }
+          
+        }
+        a {
+        font-style: italic;
+        color: $color-8;
+        // transform: translate(3px, 3px);
+         text-shadow: 3px 3px 3px $black;
+        }
+        .navActive {
+          color: $color-6;
+          text-shadow: 8px 8px 8px $white;
+          font-weight:700;
+        }
+
+        i {
+          position: absolute;
+          font-size: 0.95rem;
+          // transform: translateY(3px);
+          // transition: .2s ease;
+        }
+     
+        span {
+          margin-left: 2.7rem;
+          // &:hover{
+          //   color: $black;
+          //   transform: translate(3px, 3px);
+          //   text-shadow: 8px 8px 8px $white;
+          // }
+        }
+      
+      }
+    }
+  }
+  .socialNetwork {
+    grid-area: 3;
+
+    ul {
+      display: flex;
+      width: 264px;
+      padding: 0 14px;
+      justify-content: space-between;
+
+      li {
+        font-size: 1.5rem;
+        background: $color-8;
+        color: $color-1;
+        border-radius: 50%;
+        padding: .5rem 0.8rem;
+        transition: .3s;
+        cursor: pointer;
+
+        a:visited {
+          color: $color-1;
+        }
+        &:nth-child(1){//linkedin
+          padding: .5rem .85rem
+        }
+        &:nth-child(4){
+          padding: .5rem .75rem
+        }
+        &:hover {
+          background: $color-7;
+          transform: scale(1.1);
+        }
+      }
+    }
+    .signature {
+      margin-top: 2rem;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      font-size: .7rem;
+
+      a, a:visited {
+        color: $color-5;
+
+        &:hover {
+          color: $color-7;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px){//jusqu'à 850 px en max-width on affiche la sidebar de cette manière:
+  .sidebar {
+    display: flex;
+    min-height: 50px;
+    margin-bottom: .2rem;
+
+    .id, .socialNetwork {
+      display: none; //on ne voit plus le bloc .id et le bloc .socialNetwork
+    }
+    .navigation {
+      width: 100%;
+      padding: .1rem 1rem;
+
+      ul {
+        display: flex;
+        justify-content: space-between;//vous vous écartez les uns des autres
+
+        span {
+          margin-left: 1.5rem !important;//! important pour qu'il se rapproche de son élément
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:580px){//jusqu'à 580 px en  max-width affichage de catte manière:
+  .sidebar {
+    ul {
+      justify-content: space-around !important;//écarté les uns des autres et tiens compte des bords
+
+      li {
+        padding: 1rem 0 !important;
+      }
+      i {
+        font-size: 1.4rem !important;
+        transform: translateY(-3px) !important;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}

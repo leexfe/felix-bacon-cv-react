@@ -1,0 +1,99 @@
+.home {
+
+  .homeContent {
+    border: 2px solid $black;
+    background: linear-gradient(125deg, $color-1 55%, transparent 100%);// 115 deg, inclinaision de la limite de dégradé // 50% commence à disparaitre et jusqu'a 100 % transparant4
+   // min-height: $minHeight;
+    width: 100%;
+    
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {// la photo de fond  de bill gates vient en after
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;//hérite de la width de son parent (100%)
+      background: url('../../media/code-ligne-jaune.jpg') no-repeat center/cover;
+      z-index: -1;// pour placer l'image en fond
+      filter: brightness(100%);//luminosité
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 5rem;
+        font-family: $font-1;
+        font-style: italic;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+      }
+      h2 {
+        font-size: 2.5rem;
+        font-style: italic;
+        padding: 1.5rem 0 7rem;
+        color: $color-8;
+        text-shadow: 1px 4px 1px $black;
+      }
+      .pdf {
+        a {
+          font-size: 1.5rem;
+          font-style: italic;
+          background: $color-3;
+          padding: 1rem 2rem;
+          border-radius: $borderRadius;
+          box-shadow: 0 5px 1px rgba(51, 51, 51, 0.76);
+          transition: 0.2s ease;
+
+          &:hover {
+            background: $color-7;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 850px){
+  .home .homeContent {
+    height: 87vh;
+  }
+}
+
+
+
+// @media screen and (max-width: 850px){
+//  .home .homeContent {
+//     margin: 0 !important;
+//     height: 87vh;
+//   }
+//}
+@media screen and (max-width:550px){
+  .home .homeContent {
+    .content{
+    
+    &:after {
+    background: url('../../media/code-ligne-jaune.jpg') no-repeat 60% 50%/cover !important;
+    }
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+    .pdf a{
+      font-size: 1rem;
+      font-style: italic;
+      background: #63a4e9;
+      padding: .5rem 1rem;
+    }
+  }
+  }
+}
